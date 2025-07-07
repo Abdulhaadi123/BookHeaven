@@ -1,0 +1,189 @@
+.sell-product-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+.sell-product-title {
+    text-align: center;
+    color: #333;
+}
+
+.sell-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sell-product-label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.sell-product-input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.sell-product-button {
+    width: 40%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sell-product-button:hover {
+    background-color: #45a049;
+}
+
+.sell-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Sales record styling */
+.sales-record-container {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .sales-record-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+@media (max-width: 600px) {
+    .sell-product-container {
+        padding: 15px;
+    }
+
+    .sell-product-input,
+    .sell-product-button {
+        font-size: 0.9rem;
+    }
+}
+
+.products-container {
+    padding: 20px;
+}
+
+
+.product-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Base styling for the icon */
+.invoice-icon {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: #007bff; /* Default color for enabled state */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for visual feedback */
+}
+
+/* Hover effect for enabled icon */
+.invoice-icon:hover {
+  color: #0056b3; /* Darker blue for hover effect */
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Disabled state styling */
+.invoice-icon.disabled {
+  color: #b0b0b0; /* Gray color for disabled icon */
+  cursor: not-allowed;
+  pointer-events: none; /* Prevents all events when disabled */
+  transform: none; /* Removes any hover effects */
+}
+
+.generate-invoice-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.invoice-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.invoice-form input,
+.invoice-form select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.product-info {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.generate-invoice-submit {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.generate-invoice-submit:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .generate-invoice-container {
+        padding: 15px;
+    }
+    
+    .invoice-form .form-group {
+        flex-direction: column;
+    }
+}
+
+.invoice-container {
+    display: none; /* Hide the invoice on the screen */
+  }
+  
+  @media print {
+    .invoice-container {
+      display: block; /* Show the invoice when printing */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white; /* Optional: Ensure it looks clean for printing */
+    }
+  }
